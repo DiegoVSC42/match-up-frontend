@@ -1,0 +1,21 @@
+{
+  "pages": {
+    "home": {
+      "app-title": "Match Up"
+    }
+  },
+
+  "components": {
+    "footer": {
+      "made-by": "Feito por DiegoVSC42"
+    },
+    "language-switch": {
+      "title": "Idioma",
+      "abreviation": "pt"
+    },
+    "theme-switch": {
+      "dark": "Tema Escuro",
+      "light": "Tema Claro"
+    }
+  }
+}

@@ -1,0 +1,14 @@
+<div class="principal">
+  <p class="title">{{ "components.language-switch.title" | translate }}</p>
+
+  <div
+    class="lang-button {{ isEnglish ? 'en' : 'pt' }}"
+    (click)="toggleLanguage()"
+  >
+    <div class="indicator">
+      <p>
+        {{ "components.language-switch.abreviation" | translate }}
+      </p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,43 @@
+<main>
+  <div class="container">
+    <h1>
+      {{ "pages.home.app-title-first-word" | translate }}
+      <span>{{ "pages.home.app-title-second-word" | translate }}</span>
+    </h1>
+    <div class="switches">
+      <app-theme-switch></app-theme-switch>
+      <app-language-switch
+        [language]="currentLanguage"
+        (languageChange)="changeLanguage($event)"
+      ></app-language-switch>
+    </div>
+    <div class="button-modal-container">
+      <app-button (clicked)="openModal()">
+        {{ "pages.home.button.start" | translate }}
+      </app-button>
+
+      @if (isModalOpen) {
+      <div class="modal-container">
+        <div class="modal-content">
+          <h3>{{ "modal.title" | translate }}</h3>
+          <textarea
+            [(ngModel)]="modalText"
+            placeholder="{{ 'modal.placeholder' | translate }}"
+          ></textarea>
+
+          <div class="modal-actions">
+            <app-button (clicked)="handleSubmit()">
+              {{ "modal.submit" | translate }}
+            </app-button>
+
+            <app-button (clicked)="closeModal()" variant="secondary">
+              {{ "modal.cancel" | translate }}
+            </app-button>
+          </div>
+        </div>
+      </div>
+      }
+    </div>
+  </div>
+  <app-footer></app-footer>
+</main>

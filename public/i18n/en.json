@@ -1,0 +1,33 @@
+{
+  "pages": {
+    "home": {
+      "app-title-first-word": "Match",
+      "app-title-second-word": "Up",
+      "button": {
+        "start": "Start New Game"
+      }
+    }
+  },
+
+  "components": {
+    "footer": {
+      "made-by": "Made by DiegoVSC42"
+    },
+    "language-switch": {
+      "title": "Language",
+      "abreviation": "en"
+    },
+
+    "theme-switch": {
+      "dark": "Dark Theme",
+      "light": "Light Theme"
+    }
+  },
+
+  "modal": {
+    "title": "Enter your text",
+    "placeholder": "Type here...",
+    "submit": "Submit",
+    "cancel": "Cancel"
+  }
+}
