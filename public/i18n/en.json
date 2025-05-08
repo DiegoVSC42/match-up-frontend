@@ -8,7 +8,6 @@
       }
     }
   },
-
   "components": {
     "footer": {
       "made-by": "Made by DiegoVSC42"
@@ -17,17 +16,35 @@
       "title": "Language",
       "abreviation": "en"
     },
-
     "theme-switch": {
       "dark": "Dark Theme",
       "light": "Light Theme"
+    },
+    "match": {
+      "team-a": "Team A",
+      "team-b": "Team B",
+      "reserves": "Reserves",
+      "add-player": "Add New Player",
+      "remove-player": "Remove Players",
+      "register-result": "Register Result",
+      "select-losing-team": "Which team lost?"
     }
   },
-
   "modal": {
-    "title": "Enter your text",
-    "placeholder": "Type here...",
-    "submit": "Submit",
+    "createTitle": "Create New Match",
+    "addPlayersTitle": "Add Players",
+    "removePlayersTitle": "Remove Players",
+    "playersLabel": "Players",
+    "playersPlaceholder": "Enter player names...",
+    "addButton": "Add",
+    "removeButton": "Remove",
+    "createButton": "Create Match",
+    "title": "Create Match",
+    "textLabel": "Text",
+    "textPlaceholder": "Paste player list here...",
+    "teamSizeLabel": "Team size",
+    "teamSizePlaceholder": "Number of members",
+    "submit": "Generate Teams",
     "cancel": "Cancel"
   }
 }

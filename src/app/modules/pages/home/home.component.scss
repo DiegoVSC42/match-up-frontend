@@ -136,6 +136,40 @@ button:hover {
     min-width: 100px;
   }
 }
+.actions-after-match {
+  display: flex;
+  gap: 20px;
+  margin-top: 15px;
+}
+
+.remove-button {
+  ::ng-deep .custom-button {
+    background-color: #e53e3e;
+    color: white;
+
+    &:hover {
+      background-color: #c53030;
+    }
+
+    &:disabled {
+      background-color: #feb2b2;
+      cursor: not-allowed;
+    }
+  }
+}
+
+.actions-after-match {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 @media (max-width: 750px) {
   .properties-container {
     display: flex;

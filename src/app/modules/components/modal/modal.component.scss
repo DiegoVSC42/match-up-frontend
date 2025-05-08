@@ -1,0 +1,114 @@
+// modal.component.scss
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  font-family: var(--fonte-texto);
+}
+
+.modal-content {
+  background-color: var(--cor-de-fundo);
+  padding: 2rem;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.modal-title {
+  font-family: var(--fonte-titulo);
+  color: var(--cor-texto-principal);
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--cor-texto-secundario);
+    font-size: 0.9rem;
+    font-weight: 500;
+
+    &.required::after {
+      content: " *";
+      color: #e53e3e;
+    }
+  }
+}
+
+.text-input,
+.number-input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  font-family: var(--fonte-texto);
+  color: var(--cor-texto);
+  background-color: var(--cor-de-fundo);
+
+  &:focus {
+    outline: none;
+    border-color: var(--cor-destaque-principal);
+    box-shadow: 0 0 0 2px rgba(108, 99, 255, 0.2);
+  }
+}
+
+.text-input {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: center; /* Centralizado */
+  gap: 1.5rem; /* Espaço maior entre botões */
+  margin-top: 2rem; /* Mais espaço acima dos botões */
+}
+
+.cancel-button {
+  ::ng-deep .custom-button {
+    background-color: transparent;
+    color: var(--cor-texto-secundario);
+    border: 1px solid #d1d5db;
+    min-width: 150px; /* Largura maior */
+    padding: 12px 24px; /* Padding maior */
+    font-size: 1rem; /* Fonte maior */
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.05);
+    }
+  }
+}
+
+.submit-button {
+  ::ng-deep .custom-button {
+    min-width: 150px; /* Largura maior */
+    padding: 12px 24px; /* Padding maior */
+    font-size: 1rem; /* Fonte maior */
+  }
+
+  ::ng-deep .custom-button:not([disabled]) {
+    background-color: var(--cor-fundo-botao);
+    color: var(--cor-texto-botao);
+
+    &:hover {
+      background-color: var(--cor-destaque-principal);
+    }
+  }
+
+  ::ng-deep .custom-button[disabled] {
+    background-color: #a5b4fc;
+    cursor: not-allowed;
+  }
+}

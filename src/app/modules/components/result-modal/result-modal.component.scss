@@ -1,0 +1,63 @@
+// result-modal.component.scss
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  font-family: var(--fonte-texto);
+}
+
+.team-select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--cor-texto-secundario);
+  border-radius: 4px;
+  font-family: var(--fonte-texto);
+  color: var(--cor-texto-principal);
+  background-color: var(--cor-de-fundo);
+
+  &:focus {
+    outline: none;
+    border-color: var(--cor-destaque-principal);
+  }
+}
+
+.result-button {
+  ::ng-deep .custom-button {
+    background-color: #38a169;
+
+    &:hover {
+      background-color: #2f855a;
+    }
+  }
+}
+/* result-modal.component.scss */
+.modal-content {
+  background-color: var(--cor-de-fundo);
+  padding: 2rem;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.modal-title {
+  font-family: var(--fonte-titulo);
+  color: var(--cor-texto-principal);
+  margin-bottom: 1.5rem;
+  font-size: 1.25rem;
+  text-align: center;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}

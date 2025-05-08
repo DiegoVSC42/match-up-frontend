@@ -1,0 +1,43 @@
+<div class="modal-overlay" *ngIf="isOpen" (click)="close()">
+  <div class="modal-content" (click)="$event.stopPropagation()">
+    <h2 class="modal-title">{{ title | translate }}</h2>
+
+    <div class="form-group">
+      <label for="text-input" class="required">{{
+        "modal.playersLabel" | translate
+      }}</label>
+      <textarea
+        id="text-input"
+        [(ngModel)]="text"
+        class="text-input"
+        [placeholder]="'modal.playersPlaceholder' | translate"
+        required
+      ></textarea>
+    </div>
+
+    @if (showTeamSize) {
+    <div class="form-group">
+      <label for="team-size-input">{{
+        "modal.teamSizeLabel" | translate
+      }}</label>
+      <input
+        id="team-size-input"
+        type="number"
+        [(ngModel)]="teamSize"
+        class="number-input"
+        [placeholder]="'modal.teamSizePlaceholder' | translate"
+        min="1"
+      />
+    </div>
+    }
+
+    <div class="modal-actions">
+      <app-button class="cancel-button" (clicked)="close()">
+        {{ "modal.cancel" | translate }}
+      </app-button>
+      <app-button class="submit-button" (clicked)="submit()">
+        {{ submitText }}
+      </app-button>
+    </div>
+  </div>
+</div>

@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TextModalComponent } from './text-modal.component';
+import { PartidaComponent } from './partida.component';
 
-describe('TextModalComponent', () => {
-  let component: TextModalComponent;
-  let fixture: ComponentFixture<TextModalComponent>;
+describe('PartidaComponent', () => {
+  let component: PartidaComponent;
+  let fixture: ComponentFixture<PartidaComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [TextModalComponent]
+      imports: [PartidaComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(TextModalComponent);
+    fixture = TestBed.createComponent(PartidaComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

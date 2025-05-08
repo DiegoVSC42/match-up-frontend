@@ -1,0 +1,24 @@
+<!-- result-modal.component.html -->
+<div class="modal-overlay" *ngIf="isOpen" (click)="close()">
+  <div class="modal-content" (click)="$event.stopPropagation()">
+    <h2 class="modal-title">
+      {{ "components.match.select-losing-team" | translate }}
+    </h2>
+
+    <div class="form-group">
+      <select [(ngModel)]="losingTeam" class="team-select">
+        <option value="A">{{ "components.match.team-a" | translate }}</option>
+        <option value="B">{{ "components.match.team-b" | translate }}</option>
+      </select>
+    </div>
+
+    <div class="modal-actions">
+      <app-button class="cancel-button" (clicked)="close()">
+        {{ "modal.cancel" | translate }}
+      </app-button>
+      <app-button class="submit-button" (clicked)="submit()">
+        {{ "modal.submit" | translate }}
+      </app-button>
+    </div>
+  </div>
+</div>

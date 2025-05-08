@@ -1,10 +1,13 @@
 {
   "pages": {
     "home": {
-      "app-title": "Match Up"
+      "app-title-first-word": "Match",
+      "app-title-second-word": "Up",
+      "button": {
+        "start": "Iniciar Nova Partida"
+      }
     }
   },
-
   "components": {
     "footer": {
       "made-by": "Feito por DiegoVSC42"
@@ -16,6 +19,32 @@
     "theme-switch": {
       "dark": "Tema Escuro",
       "light": "Tema Claro"
+    },
+    "match": {
+      "team-a": "Time A",
+      "team-b": "Time B",
+      "reserves": "Reservas",
+      "add-player": "Adicionar Novo Jogador",
+      "remove-player": "Remover Jogadores",
+      "register-result": "Registrar Resultado",
+      "select-losing-team": "Qual time perdeu?"
     }
+  },
+  "modal": {
+    "createTitle": "Criar Nova Partida",
+    "addPlayersTitle": "Adicionar Jogadores",
+    "removePlayersTitle": "Remover Jogadores",
+    "playersLabel": "Jogadores",
+    "playersPlaceholder": "Digite os nomes dos jogadores...",
+    "addButton": "Adicionar",
+    "removeButton": "Remover",
+    "createButton": "Criar Partida",
+    "title": "Criar Partida",
+    "textLabel": "Texto",
+    "textPlaceholder": "Cole a lista de jogadores aqui...",
+    "teamSizeLabel": "Tamanho do time",
+    "teamSizePlaceholder": "Número de integrantes",
+    "submit": "Gerar Times",
+    "cancel": "Cancelar"
   }
 }

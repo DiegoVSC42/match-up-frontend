@@ -13,10 +13,9 @@ export class ListaService {
   formatarLista(texto: string): Observable<string[]> {
     const headers = new HttpHeaders({
       'Content-Type': 'text/plain',
-      Accept: 'application/json', // Esperamos JSON na resposta
+      Accept: 'application/json',
     });
 
-    // Envia o texto diretamente como corpo da requisição
     return this.http.post<string[]>(this.API, texto, { headers });
   }
 }

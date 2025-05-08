@@ -1,0 +1,30 @@
+<div class="partida-container">
+  <div class="grid">
+    <div class="equipe">
+      <h2>{{ "components.match.team-a" | translate }}</h2>
+      <ul>
+        @for (jogador of partida.equipeA.jogadores; track jogador) {
+        <li>{{ jogador }}</li>
+        }
+      </ul>
+    </div>
+
+    <div class="equipe">
+      <h2>{{ "components.match.team-b" | translate }}</h2>
+      <ul>
+        @for (jogador of partida.equipeB.jogadores; track jogador) {
+        <li>{{ jogador }}</li>
+        }
+      </ul>
+    </div>
+
+    <div class="reserva" style="grid-column: span 2">
+      <h2>{{ "components.match.reserves" | translate }}</h2>
+      <ul>
+        @for (jogador of partida.reserva.jogadores; track jogador) {
+        <li>{{ jogador }}</li>
+        }
+      </ul>
+    </div>
+  </div>
+</div>
