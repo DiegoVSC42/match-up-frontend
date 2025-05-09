@@ -1,16 +1,34 @@
 .custom-button {
-  padding: 10px 20px;
-  min-width: 160px;
-  background-color: var(--cor-fundo-botao);
-  color: var(--cor-texto-botao);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 6px 12px;
   border: none;
-  border-radius: 8px;
+  border-radius: 6px;
+  background-color: var(--cor-fundo-botao, #444);
+  color: var(--cor-texto-botao, #fff);
   font-family: var(--fonte-texto);
-  font-size: 16px;
+  font-size: 14px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+
+  svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  &:hover {
+    background-color: var(--cor-destaque-principal, #666);
+  }
 }
 
-.custom-button:hover {
-  background-color: var(--cor-destaque-principal);
+.small {
+  padding: 4px 8px;
+  font-size: 12px;
+}
+
+.large {
+  padding: 10px 20px;
+  font-size: 16px;
 }

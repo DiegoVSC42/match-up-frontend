@@ -1,0 +1,140 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  position: relative;
+  z-index: 1001;
+  background: var(--cor-de-fundo);
+  border: 1px solid var(--cor-texto-secundario);
+  border-radius: 8px;
+  padding: 20px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  h3 {
+    color: var(--cor-destaque-principal);
+    margin-bottom: 20px;
+    text-align: center;
+  }
+}
+
+.form-group {
+  margin-bottom: 20px;
+
+  label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--cor-texto-principal);
+    font-weight: 500;
+  }
+
+  input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid var(--cor-texto-secundario);
+    background-color: var(--cor-de-fundo);
+    color: var(--cor-texto-principal);
+  }
+}
+
+.options-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.option {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 10px;
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.05);
+  transition: background-color 0.2s;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  label {
+    margin-bottom: 0;
+    cursor: pointer;
+    flex-grow: 1;
+
+    .description {
+      display: block;
+      font-size: 0.85rem;
+      color: var(--cor-texto-secundario);
+      margin-top: 4px;
+      font-weight: normal;
+    }
+  }
+}
+
+/* Estilização dos radio buttons */
+input[type="radio"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--cor-texto-secundario);
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+  margin-top: 2px;
+
+  &:hover {
+    border-color: var(--cor-destaque-principal);
+  }
+
+  &:checked {
+    border-color: var(--cor-destaque-principal);
+    background-color: var(--cor-destaque-principal);
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 8px;
+      height: 8px;
+      background-color: var(--cor-de-fundo);
+      border-radius: 50%;
+    }
+  }
+}
+
+/* Ajustes para tema escuro */
+.dark-theme {
+  input[type="radio"] {
+    &:checked {
+      &::after {
+        background-color: var(--cor-de-fundo);
+      }
+    }
+  }
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}

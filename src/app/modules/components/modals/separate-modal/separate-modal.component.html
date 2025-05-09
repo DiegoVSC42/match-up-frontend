@@ -1,0 +1,45 @@
+<div class="modal-overlay" *ngIf="isOpen" (click)="onCancel()">
+  <div class="modal-content" (click)="$event.stopPropagation()">
+    <h3>{{ "modal.separateTitle" | translate }}</h3>
+
+    <div class="form-group">
+      <label>{{ "modal.playersToMove" | translate }}</label>
+      <input
+        type="number"
+        [(ngModel)]="quantidade"
+        min="1"
+        [max]="maxPlayers"
+      />
+    </div>
+
+    <div class="form-group">
+      <label>{{ "modal.separationType" | translate }}</label>
+      <div class="options-container">
+        <div *ngFor="let option of separationOptions" class="option">
+          <input
+            type="radio"
+            id="{{ option.value }}"
+            name="separationType"
+            [(ngModel)]="tipoSeparacao"
+            [value]="option.value"
+          />
+          <label for="{{ option.value }}">
+            {{ option.label | translate }}
+            <span class="description">{{
+              option.description | translate
+            }}</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-actions">
+      <app-button (click)="onCancel()">{{
+        "modal.cancel" | translate
+      }}</app-button>
+      <app-button (click)="onConfirm()">
+        {{ "modal.confirm" | translate }}
+      </app-button>
+    </div>
+  </div>
+</div>

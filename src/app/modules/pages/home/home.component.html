@@ -14,28 +14,27 @@
     </div>
 
     @if (!partida) {
-    <app-button (clicked)="openModal('create')">
+    <app-button (clicked)="openModal('create')" size="large">
       {{ "pages.home.button.start" | translate }}
     </app-button>
     } @if (partida) {
     <div class="actions-after-match">
-      <app-button (clicked)="openModal('add')">
-        {{ "components.match.add-player" | translate }}
-      </app-button>
-
-      <app-button (clicked)="openModal('remove')" class="remove-button">
-        {{ "components.match.remove-player" | translate }}
-      </app-button>
-
       <app-button
         class="new-match-button"
+        size="large"
         (clicked)="partida = null; openModal('create')"
       >
         {{ "pages.home.button.start" | translate }}
       </app-button>
-      <app-button (clicked)="openResultModal()" class="result-button">
-        {{ "components.match.register-result" | translate }}
-      </app-button>
+
+      <div class="secondary-actions">
+        <app-button (clicked)="openResultModal()" class="result-button">
+          {{ "components.match.register-result" | translate }}
+        </app-button>
+        <app-button (clicked)="separarJogadores()" class="separate-button">
+          {{ "components.match.separate-players" | translate }}
+        </app-button>
+      </div>
     </div>
 
     <app-partida [partida]="partida" />
@@ -54,6 +53,11 @@
       (closed)="closeResultModal()"
       (submitted)="handleResultSubmit($event)"
     ></app-result-modal>
+    <app-separate-modal
+      [isOpen]="isSeparateModalOpen"
+      (confirmed)="handleSeparateConfirm($event)"
+      (canceled)="handleSeparateCancel()"
+    ></app-separate-modal>
   </div>
   <app-footer />
 </main>

@@ -26,25 +26,33 @@
       "reserves": "Reserves",
       "add-player": "Add New Player",
       "remove-player": "Remove Players",
-      "register-result": "Register Result",
-      "select-losing-team": "Which team lost?"
+      "register-result": "Update Teams",
+      "select-losing-team": "Which team lost?",
+      "separate-players": "Separate Players"
     }
   },
   "modal": {
-    "createTitle": "Create New Match",
-    "addPlayersTitle": "Add Players",
-    "removePlayersTitle": "Remove Players",
+    "createTitle": "Create a new match",
     "playersLabel": "Players",
-    "playersPlaceholder": "Enter player names...",
-    "addButton": "Add",
-    "removeButton": "Remove",
-    "createButton": "Create Match",
-    "title": "Create Match",
-    "textLabel": "Text",
-    "textPlaceholder": "Paste player list here...",
+    "playersPlaceholder": "Enter player names",
     "teamSizeLabel": "Team size",
-    "teamSizePlaceholder": "Number of members",
-    "submit": "Generate Teams",
-    "cancel": "Cancel"
+    "teamSizePlaceholder": "Enter team size",
+    "createButton": "Create",
+    "separateTitle": "Separate Players",
+    "playersToMove": "Number of players to move",
+    "separationType": "Separation type",
+    "random": "Random",
+    "randomDescription": "Randomly selects players from both teams",
+    "firstPlayers": "First players",
+    "firstPlayersDescription": "Swaps the first N players of each team",
+    "middlePlayers": "Middle players",
+    "middlePlayersDescription": "Swaps N players from the middle of each team",
+    "lastPlayers": "Last players",
+    "lastPlayersDescription": "Swaps the last N players of each team",
+    "extremes": "Extremes",
+    "extremesDescription": "Swaps first N of team A with last N of team B",
+    "confirm": "Confirm",
+    "cancel": "Cancel",
+    "submit": "Submit"
   }
 }

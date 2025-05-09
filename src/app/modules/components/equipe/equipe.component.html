@@ -1,0 +1,35 @@
+<div class="equipe" [class.reserva]="tipo === 'reserva'">
+  <h2>{{ titulo | translate }}</h2>
+  <ul [class.reserve-list]="tipo === 'reserva'">
+    @for (jogador of jogadores; track jogador) {
+    <li class="jogador-item">
+      <span>{{ jogador }}</span>
+      <div class="actions">
+        <app-button
+          (clicked)="editarJogador(jogador)"
+          [class.small]="tipo === 'reserva'"
+          class="icon-button"
+        >
+          <i class="fas fa-edit"></i>
+        </app-button>
+        <app-button
+          (clicked)="excluirJogador(jogador)"
+          [class.small]="tipo === 'reserva'"
+          class="icon-button"
+        >
+          <i class="fas fa-trash-alt"></i>
+        </app-button>
+      </div>
+    </li>
+    }
+  </ul>
+
+  @if (tipo === 'reserva') {
+  <div class="add-player-container">
+    <app-button (clicked)="adicionarNovoJogador()" class="add-button">
+      <i class="fas fa-plus"></i>
+      {{ "components.match.add-player" | translate }}
+    </app-button>
+  </div>
+  }
+</div>

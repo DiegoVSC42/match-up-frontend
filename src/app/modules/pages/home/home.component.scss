@@ -36,145 +36,42 @@ p {
   }
 }
 
-.container label {
-  color: var(--cor-texto-principal);
-  margin-bottom: 8px;
-}
-
-.container input {
-  width: 50%;
-  text-align: center;
-  padding: 8px;
-  font-size: 16px;
-  margin-bottom: 8px;
-  border: none;
-  border-radius: 8px;
-  background-color: var(--cor-de-fundo);
-  color: var(--cor-texto-principal);
-  border: 1px solid var(--cor-texto-secundario);
-}
-
-.input-number::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-}
-
-button {
-  width: 25%;
-  height: 25px;
-  background-color: var(--cor-fundo-botao);
-  color: var(--cor-texto);
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-button:hover {
-  opacity: 0.9;
-}
-
-.properties-container {
-  width: 100%;
-  height: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 0.75fr 0.75fr 0.75fr;
-  align-items: start;
-  justify-items: center;
-  color: var(--cor-texto-principal);
-}
-
-.button-modal-container {
-  position: relative;
-  width: 100%;
+.actions-after-match {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 20px 0;
-}
-
-.modal-container {
-  position: relative;
-  width: 100%;
-  max-width: 500px;
-  margin-top: 20px;
-}
-
-.modal-content {
-  background-color: var(--cor-de-fundo);
-  border: 1px solid var(--cor-texto-secundario);
-  border-radius: 8px;
-  padding: 20px;
-  width: 100%;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-
-  h3 {
-    color: var(--cor-destaque-principal);
-    margin-bottom: 15px;
-    text-align: center;
-  }
-
-  textarea {
-    width: 100%;
-    min-height: 100px;
-    padding: 10px;
-    border-radius: 4px;
-    border: 1px solid var(--cor-texto-secundario);
-    background-color: var(--cor-de-fundo);
-    color: var(--cor-texto-principal);
-    margin-bottom: 15px;
-    resize: vertical;
-  }
-}
-
-.modal-actions {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-
-  app-button {
-    min-width: 100px;
-  }
-}
-.actions-after-match {
-  display: flex;
-  gap: 20px;
-  margin-top: 15px;
-}
-
-.remove-button {
-  ::ng-deep .custom-button {
-    background-color: #e53e3e;
-    color: white;
-
-    &:hover {
-      background-color: #c53030;
-    }
-
-    &:disabled {
-      background-color: #feb2b2;
-      cursor: not-allowed;
-    }
-  }
-}
-
-.actions-after-match {
-  display: flex;
   gap: 1rem;
-  margin-bottom: 1.5rem;
-  flex-wrap: wrap;
-  justify-content: center;
 
-  @media (max-width: 600px) {
+  .new-match-button {
+    width: 100%;
+    max-width: 300px;
+    padding: 12px 24px;
+    font-size: 1.1rem;
+  }
+
+  .secondary-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    width: 100%;
+
+    app-button {
+      min-width: 180px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .secondary-actions {
     flex-direction: column;
     align-items: center;
   }
-}
-@media (max-width: 750px) {
-  .properties-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+
+  .container h1 {
+    font-size: 48px;
+  }
+
+  .switches {
+    width: 100%;
   }
 }

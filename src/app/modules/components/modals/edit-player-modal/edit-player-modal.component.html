@@ -1,0 +1,19 @@
+<div class="modal-backdrop">
+  <div class="modal">
+    <h3>{{ isNewPlayer ? "Adicionar novo jogador" : "Editar nome" }}</h3>
+    <input
+      type="text"
+      [value]="newName"
+      (input)="handleInputChange($event)"
+      placeholder="{{
+        isNewPlayer ? 'Nome do novo jogador' : 'Novo nome do jogador'
+      }}"
+    />
+    <div class="modal-actions">
+      <button (click)="cancelEdit()">Cancelar</button>
+      <button (click)="confirmEdit()">
+        {{ isNewPlayer ? "Adicionar" : "Salvar" }}
+      </button>
+    </div>
+  </div>
+</div>

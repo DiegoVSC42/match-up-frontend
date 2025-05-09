@@ -4,7 +4,7 @@
       "app-title-first-word": "Match",
       "app-title-second-word": "Up",
       "button": {
-        "start": "Iniciar Nova Partida"
+        "start": "Iniciar Novo Jogo"
       }
     }
   },
@@ -24,27 +24,35 @@
       "team-a": "Time A",
       "team-b": "Time B",
       "reserves": "Reservas",
-      "add-player": "Adicionar Novo Jogador",
+      "add-player": "Adicionar Jogador",
       "remove-player": "Remover Jogadores",
-      "register-result": "Registrar Resultado",
-      "select-losing-team": "Qual time perdeu?"
+      "register-result": "Atualizar Times",
+      "select-losing-team": "Qual time perdeu?",
+      "separate-players": "Separar Jogadores"
     }
   },
   "modal": {
-    "createTitle": "Criar Nova Partida",
-    "addPlayersTitle": "Adicionar Jogadores",
-    "removePlayersTitle": "Remover Jogadores",
+    "createTitle": "Criar nova partida",
     "playersLabel": "Jogadores",
-    "playersPlaceholder": "Digite os nomes dos jogadores...",
-    "addButton": "Adicionar",
-    "removeButton": "Remover",
-    "createButton": "Criar Partida",
-    "title": "Criar Partida",
-    "textLabel": "Texto",
-    "textPlaceholder": "Cole a lista de jogadores aqui...",
+    "playersPlaceholder": "Digite os nomes dos jogadores",
     "teamSizeLabel": "Tamanho do time",
-    "teamSizePlaceholder": "Número de integrantes",
-    "submit": "Gerar Times",
-    "cancel": "Cancelar"
+    "teamSizePlaceholder": "Digite o tamanho do time",
+    "createButton": "Criar",
+    "separateTitle": "Separar Jogadores",
+    "playersToMove": "Número de jogadores para mover",
+    "separationType": "Tipo de separação",
+    "random": "Aleatório",
+    "randomDescription": "Seleciona jogadores aleatoriamente de ambos os times",
+    "firstPlayers": "Primeiros jogadores",
+    "firstPlayersDescription": "Troca os primeiros N jogadores de cada time",
+    "middlePlayers": "Jogadores do meio",
+    "middlePlayersDescription": "Troca N jogadores do meio de cada time",
+    "lastPlayers": "Últimos jogadores",
+    "lastPlayersDescription": "Troca os últimos N jogadores de cada time",
+    "extremes": "Extremos",
+    "extremesDescription": "Troca os primeiros N do time A com os últimos N do time B",
+    "confirm": "Confirmar",
+    "cancel": "Cancelar",
+    "submit": "Enviar"
   }
 }

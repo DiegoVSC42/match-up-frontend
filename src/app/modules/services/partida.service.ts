@@ -38,4 +38,17 @@ export class PartidaService {
     };
     return this.http.put(`${this.API}/atualizar`, payload);
   }
+
+  separarJogadores(
+    quantidadeMovida: number,
+    tipoSeparacao: string,
+    partida: any
+  ) {
+    const payload = {
+      quantidadeMovida,
+      tipoSeparacao: tipoSeparacao.toUpperCase(), // Garante maiúsculas no payload
+      partida,
+    };
+    return this.http.put(`${this.API}/separar`, payload);
+  }
 }

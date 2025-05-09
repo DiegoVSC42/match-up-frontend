@@ -1,0 +1,114 @@
+.equipe {
+  padding: 25px;
+  border-radius: 12px;
+  background-color: var(--cor-de-fundo);
+  border: 2px solid var(--cor-texto-secundario);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+
+  h2 {
+    font-family: var(--fonte-titulo);
+    font-size: 1.8rem;
+    color: var(--cor-destaque-principal);
+    margin-bottom: 20px;
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--cor-texto-secundario);
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+    &.reserve-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 10px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--cor-texto-secundario);
+    }
+  }
+
+  &.reserva {
+    h2 {
+      color: var(--cor-destaque-secundario);
+    }
+  }
+}
+
+.jogador-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--cor-texto-secundario);
+
+  span {
+    flex: 1;
+    font-family: var(--fonte-texto);
+    font-size: 1.1rem;
+    color: var(--cor-texto-principal);
+  }
+
+  .actions {
+    display: flex;
+    gap: 8px;
+  }
+}
+
+.icon-button {
+  background: transparent;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  color: var(--cor-texto-principal);
+  transition: color 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  i {
+    font-size: 16px;
+    width: 16px;
+    height: 16px;
+  }
+
+  &:hover {
+    color: var(--cor-destaque-principal);
+  }
+
+  &.small i {
+    font-size: 14px;
+  }
+}
+
+.add-player-container {
+  display: flex;
+  justify-content: center;
+  padding-top: 16px;
+  margin-top: 8px;
+
+  .add-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background-color: var(--cor-fundo-botao);
+    color: var(--cor-texto-botao);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    font-family: var(--fonte-texto);
+    font-weight: 500;
+
+    i {
+      font-size: 14px;
+    }
+
+    &:hover {
+      background-color: var(--cor-destaque-principal);
+    }
+  }
+}

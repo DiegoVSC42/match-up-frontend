@@ -29,4 +29,16 @@ export class HomeService {
   atualizarPartida(partida: any, equipePerdedora: string) {
     return this.partidaService.atualizarPartida(partida, equipePerdedora);
   }
+
+  separarJogadores(
+    quantidadeMovida: number,
+    tipoSeparacao: string,
+    partida: any
+  ) {
+    return this.partidaService.separarJogadores(
+      quantidadeMovida,
+      tipoSeparacao,
+      partida
+    );
+  }
 }
